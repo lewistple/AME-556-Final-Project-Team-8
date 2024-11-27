@@ -91,7 +91,7 @@ for i = 1: length(T)
     J = double(subs(J_sym, [x y theta q1 q2 q3 q4], q(i, :)));
 
     % Compute joint input torques
-    tau(i, :) = (J' * F(:, i))';
+    tau(i, :) = -(J' * F(:, i))';
 
 end
 
