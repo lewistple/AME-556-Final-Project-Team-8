@@ -34,8 +34,8 @@ params.P1 = [0.0197; 0.0022; 0];
 params.P2 = [0.1838; 0.0041; 0]; 
 
 % State variables
-params.q0 = [0.1; 0.45; 0; -pi/3; pi/2; -pi/6; pi/2]; % Initial states (before landing)
-params.p_d = [0; 0.5; 0]; % Desired positions (after standing): [x_d; y_d; z_d];
+params.q0 = [0; 0.45; 0; -pi/3; pi/2; -pi/6; pi/2]; % Initial states (before landing)
+params.p_d = [0; 0.55; 0]; % Desired positions (after standing): [x_d; y_d; z_d];
 params.theta_d = 0; % Desired angle
 
 %% Program Execution
@@ -220,7 +220,7 @@ x = q(1); y = q(2); theta = q(3);
 q1 = q(4); q2 = q(5); q3 = q(6); q4 = q(7);
 
 % P1
-P1_2 = [-params.l; 0; 0]; % Frame {2}
+P1_2 = [0; -params.l; 0]; % Frame {2}
 P1_1 = rotz_sym(q2) * P1_2 + [0; -params.l; 0]; % Frame {1} to {2}
 P1_b = rotz_sym(q1) * P1_1 + [0; -params.a/2; 0]; % Frame {b} to {1}
 P1_w = rotz_sym(theta) * P1_b + [x; y; 0]; % Frame {w} to {b}
