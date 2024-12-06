@@ -1,0 +1,33 @@
+%% AME-556
+
+% HW4 Problem 2 (a. QP controller)
+
+%% Clear
+
+clear, clc, close all;
+
+%% System Setup (Include Simscape)
+
+global params;
+
+% Mass and geometry
+params.m = 0.25;
+params.l = 0.22;
+params.mb = 8;
+params.a = 0.25;
+params.b = 0.15;
+params.g = [0; 9.81; 0];
+
+% Moment of inerita
+Il_zz = params.m * params.l^2 / 12;
+Ib_xx = params.mb * params.a^2 / 12;
+Ib_yy = params.mb * params.b^2 / 12;
+Ib_zz = params.mb * (params.a^2 + params.b^2) / 12;
+%params.Ib = diag([Ib_xx Ib_yy Ib_zz]);
+
+% Spatial contact force parameters
+Kp_g = 1e5;
+Kd_g = 1e3;
+ 
+% Initial states
+params.q0 = [0; 0.45; 0; -pi/3; pi/2; -pi/6; pi/2];
