@@ -27,12 +27,12 @@ X0 = [x0; y0; theta0];
 % 调用函数生成雅可比矩阵
 ComputeJacobianSymbolic()
 
-%% controller
+%% control
 
 dt = 0.04;
 N = 3;
 
-Q = diag([500 500 20 250 250 150 0]); 
+Q = diag([400 400 20 250 250 150 0]); 
 R = diag([0.0001 0.0001 0.0001 0.0001]);    
 
 ref = [0; 0.5; 0; 0; 0; 0; 9.81];
