@@ -29,13 +29,13 @@ ComputeJacobianSymbolic()
 
 %% controller
 
-dt = 0.04;
-N = 3;
+dt = 0.4;
+N = 5;
 
-Q = diag([500 500 20 250 250 150 0]); 
+Q = diag([2000 2000 600 50 50 20 1]); 
 R = diag([0.0001 0.0001 0.0001 0.0001]);    
 
-ref = [0; 0.5; 0; 0; 0; 0; 9.81];
+ref = [0; 0.55; 0; 0; 0; 0; 9.81];
 
 %% load simscape
 % load_system("problem2b_sim.slx");
