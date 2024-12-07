@@ -15,6 +15,8 @@ I_body = 1/12 * body_M * (body_a^2 + body_b^2);
 static_friction = 0.7;
 dynamic_friction = 0.5;
 
+sampling_time = 0.02;
+
 % I.C.
 x0 = 0;
 y0 = 0.45;
@@ -29,18 +31,18 @@ ComputeJacobianSymbolic();
 
 %% controller
 
-dt = 0.04;
-N = 10;
+dt = 0.1;
+N = 3;
 
-Q = diag([600 600 400 150 150 20 1]); 
+Q = diag([580 700 500 180 350 100 1]); 
 R = diag([0.0001 0.0001 0.0001 0.0001]);    
 
 ref = [0; 0.55; 0; 0; 0; 0; 9.81];
 
 %% load simscape
-% load_system("problem2b_sim.slx");
-% out = sim("problem2b_sim.slx");
-% save_system("problem2b_sim.slx");
+% load_system("Task2_up_down_sim.slx");
+% out = sim("Task2_up_down_sim.slx");
+% save_system("Task2_up_down_sim.slx");
 
 function [foot1, foot2, CoM] = compute_biped_positions_IC(x, y, theta, q, leg_l, body_a)
 
