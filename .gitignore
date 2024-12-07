@@ -1,0 +1,49 @@
+
+/Task 2/归档/slprj
+*.autosave
+
+# Ignore backup and autosave files
+*.asv
+*.bak
+*.autosave
+
+# Ignore MATLAB generated files
+*.slxc
+*.slx.autosave
+*.mdl.autosave
+*.mex*
+
+# Ignore Simulink cache files
+*.slxc
+*.slx.autosave
+*.mdl.autosave
+
+# Ignore MATLAB Editor state files
+*.m~*
+
+# Ignore temporary files
+*.temp
+*.tmp
+*.log
+
+# Ignore project-specific files
+*.prj
+
+# Ignore folders used by MATLAB for caches and session info
+**/matlabprefs.mat
+**/mcrCache*
+**/MATLABDrive/
+**/MATLABData/
+**/MATLABProjects/
+**/SimulinkProject/
+**/slproj/            # Simulink build and cache files 
+# Ignore user-specific files
+*.mlappinstall
+*.aslx
+*.aslm
+
+# Ignore crash reports
+crash_dump.*
+*.slxc
+*.slxc
+Task 2/.DS_Store
