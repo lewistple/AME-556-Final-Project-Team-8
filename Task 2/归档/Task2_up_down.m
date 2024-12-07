@@ -25,7 +25,7 @@ X0 = [x0; y0; theta0];
 [foot1, foot, CoM] = compute_biped_positions_IC(x0, y0, theta0, q0, leg_l, body_a);
 
 % 调用函数生成雅可比矩阵
-ComputeJacobianSymbolic()
+ComputeJacobianSymbolic();
 
 %% controller
 
