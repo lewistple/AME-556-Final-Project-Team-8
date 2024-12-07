@@ -29,8 +29,8 @@ ComputeJacobianSymbolic();
 
 %% controller
 
-dt = 0.4;
-N = 5;
+dt = 0.04;
+N = 10;
 
 Q = diag([600 600 400 150 150 20 1]); 
 R = diag([0.0001 0.0001 0.0001 0.0001]);    
