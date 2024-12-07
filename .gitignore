@@ -44,3 +44,4 @@
 
 # Ignore crash reports
 crash_dump.*
+*.slxc
