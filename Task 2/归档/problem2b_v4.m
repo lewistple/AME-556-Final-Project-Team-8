@@ -4,20 +4,19 @@ close all;
 
 %% Parameters
 
-para = struct();
-para.leg_m = 0.25; % Each leg mass (kg)
-para.leg_l = 0.22; % Leg length (m)
-para.body_M = 8; % Body mass (kg)
-para.body_a = 0.25;
-para.body_b = 0.15;
-para.I_body = 1/12 * para.body_M * (para.body_a^2 + para.body_b^2);
-para.g = 9.81;
-para.mu = 0.7;
+leg_m = 0.25; % Each leg mass (kg)
+leg_l = 0.22; % Leg length (m)
+body_M = 8; % Body mass (kg)
+body_a = 0.25;
+body_b = 0.15;
+I_body = 1/12 * body_M * (body_a^2 + body_b^2);
+g = 9.81;
+mu = 0.7;
 
 static_friction = 0.7;
 dynamic_friction = 0.5;
 
-sampling_time = 0.01;
+sampling_time = 0.04;
 
 % I.C.
 x0 = 0;
@@ -26,7 +25,7 @@ theta0 = 0;
 q0 = [-pi/3; pi/2; -pi/6; pi/2]; 
 X0 = [x0; y0; theta0];
 
-[foot1, foot, CoM] = compute_biped_positions_IC(x0, y0, theta0, q0, para.leg_l, para.body_a);
+[foot1, foot, CoM] = compute_biped_positions_IC(x0, y0, theta0, q0, leg_l, body_a);
 
 % 调用函数生成雅可比矩阵
 ComputeJacobianSymbolic();
@@ -34,15 +33,15 @@ ComputeJacobianSymbolic();
 %% controller
 
 ctrl = struct();
-ctrl.mpc.dt = 0.04;  % 时间步长
-ctrl.mpc.N = 10;     % 预测时域长度
-ctrl.mpc.nx = 7;     % 状态变量数
-ctrl.mpc.nu = 4;     % 控制输入变量数
-ctrl.mpc.x_cmd = [0; 0.55; 0; 0; 0; 0];
-ctrl.fmax = 250;
-ctrl.fmin = 10;
+dt = 0.04;  % 时间步长
+N = 10;     % 预测时域长度
+nx = 7;     % 状态变量数
+nu = 4;     % 控制输入变量数
+Xd = [0; 0.55; 0; 0; 0; 0];
+fmax = 250;
+fmin = 10;
 
-Q = diag([500 100 500 180 200 500 0]); 
+Q = diag([200 200 800 10 10 30 1]); 
 R = diag([0.0001 0.0001 0.0001 0.0001]);    
 
 ref = [0; 0.55; 0; 0; 0; 0; 9.81];
