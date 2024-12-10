@@ -28,6 +28,10 @@ Ib_zz = params.mb * (params.a^2 + params.b^2) / 12;
 Kp_g = 1e5;
 Kd_g = 1e3;
  
+% Coeffcient of friction (static & dynamic)
+Cof_s = 0.7;
+Cof_d = 0.5;
+
 % Initial states
 params.q0 = [0; 0.43; 0; -pi/3; pi/2; -pi/6; pi/2];
 
