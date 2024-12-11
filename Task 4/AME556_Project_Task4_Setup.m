@@ -37,12 +37,3 @@ params.q0 = [0; 0.43; 0; -pi/3; pi/2; -pi/6; pi/2];
 
 dt = 0.04;
 N = 10;
-
-%% Plot
-
-% plot(out.F.Time, squeeze(out.F.Data(1, :, :)), LineWidth=2); hold on; grid on;
-% plot(out.F.Time, squeeze(out.F.Data(2, :, :)), LineWidth=2); 
-% plot(out.F.Time, squeeze(out.F.Data(4, :, :)), LineWidth=2); 
-% plot(out.F.Time, squeeze(out.F.Data(5, :, :)), LineWidth=2); 
-% legend('F1x', 'F1y', 'F2x', 'F2y');
-
