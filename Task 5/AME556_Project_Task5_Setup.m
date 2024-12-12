@@ -1,6 +1,6 @@
 %% AME-556
 
-% Project Task 2 Setup (Condensed MPC)
+% Project Task 5 Setup (Condensed MPC)
 
 %% Clear
 
@@ -35,14 +35,15 @@ Cof_d = 0.5;
 % Initial states
 params.q0 = [0; 0.43; 0; -pi/3; pi/2; -pi/6; pi/2];
 
-dt = 0.04;
-N = 10;
+% MPC parameters
+dt = 0.04; % Time step
+N = 10; % Number of horizons
 
-%% Plot
-
-% plot(out.F.Time, squeeze(out.F.Data(1, :, :)), LineWidth=2); hold on; grid on;
-% plot(out.F.Time, squeeze(out.F.Data(2, :, :)), LineWidth=2); 
-% plot(out.F.Time, squeeze(out.F.Data(4, :, :)), LineWidth=2); 
-% plot(out.F.Time, squeeze(out.F.Data(5, :, :)), LineWidth=2); 
-% legend('F1x', 'F1y', 'F2x', 'F2y');
+% Obstacle course (grid surface)
+l = 0.5;
+dy = 1e-8;
+x_grid = [0 1];
+y_grid = [0 l l+2 l+2+dy l+3 l+3+dy l+5 l+5+dy l+5.4 l+5.4+dy l+7.4];
+z_height = [0 0 0 0.4 0.4 0 0 -0.4 -0.4 0 0;
+            0 0 0 0.4 0.4 0 0 -0.4 -0.4 0 0];
 
