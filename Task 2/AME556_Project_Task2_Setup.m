@@ -27,17 +27,13 @@ Ib_zz = params.mb * (params.a^2 + params.b^2) / 12;
 % Spatial contact force parameters
 Kp_g = 1e5;
 Kd_g = 1e3;
- 
+
+% Coefficient of friction (static & dynamic)
+Cof_s = 0.7;
+Cof_d = 0.5;
+
 % Initial states
-params.q0 = [0; 0.45; 0; -pi/3; pi/2; -pi/6; pi/2];
+params.q0 = [0; 0.43; 0; -pi/3; pi/2; -pi/6; pi/2];
 
 dt = 0.04;
 N = 10;
-
-%% Plot
-
-% plot(out.F.Time, squeeze(out.F.Data(1, :, :)), LineWidth=2); hold on; grid on;
-% plot(out.F.Time, squeeze(out.F.Data(2, :, :)), LineWidth=2); 
-% plot(out.F.Time, squeeze(out.F.Data(4, :, :)), LineWidth=2); 
-% plot(out.F.Time, squeeze(out.F.Data(5, :, :)), LineWidth=2); 
-% legend('F1x', 'F1y', 'F2x', 'F2y');
