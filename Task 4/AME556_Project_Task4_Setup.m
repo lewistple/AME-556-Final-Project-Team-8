@@ -37,7 +37,7 @@ params.q0 = [0; 0.43; 0; -pi/3; pi/2; -pi/6; pi/2];
 
 % MPC parameters
 dt = 0.04; % Time step
-N = 20; % Number of horizons
+N = 10; % Number of horizons
 
 %% Stairs
 % top (grid surface)
