@@ -1,6 +1,6 @@
 %% AME-556
 
-% Project Task 2 Setup (Condensed MPC)
+% Project Task 4 Setup (Condensed MPC)
 
 %% Clear
 
