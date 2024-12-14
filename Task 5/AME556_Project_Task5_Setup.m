@@ -1,4 +1,4 @@
-%% AME-556
+-%% AME-556
 
 % Project Task 5 Setup (Condensed MPC)
 
@@ -47,3 +47,5 @@ y_grid = [0 l l+2 l+2+dy l+3 l+3+dy l+5 l+5+dy l+5.4 l+5.4+dy l+7.4 2*l+7.4];
 z_height = [0 0 0 0.4 0.4 0 0 -0.4 -0.4 0 0 0;
             0 0 0 0.4 0.4 0 0 -0.4 -0.4 0 0 0];
 
+
+stairsColor = [0.5 0.5 0.5];
