@@ -1,4 +1,4 @@
--%% AME-556
+%% AME-556
 
 % Project Task 5 Setup (Condensed MPC)
 
