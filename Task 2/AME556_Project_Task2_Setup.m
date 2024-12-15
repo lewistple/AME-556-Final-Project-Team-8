@@ -38,3 +38,6 @@ params.q0 = [0; 0.43; 0; -pi/3; pi/2; -pi/6; pi/2];
 % MPC parameters
 dt = 0.04; % Time step
 N = 10; % Number of horizons
+
+% Course offset
+lo = 0.5;
