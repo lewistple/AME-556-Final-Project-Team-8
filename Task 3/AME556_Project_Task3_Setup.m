@@ -1,6 +1,6 @@
 %% AME-556
 
-% Project Task 4 Setup (Condensed MPC)
+% Project Task 3 Setup
 
 %% Clear
 
@@ -39,4 +39,5 @@ params.q0 = [0; 0.43; 0; -pi/3; pi/2; -pi/6; pi/2];
 dt = 0.04; % Time step
 N = 10; % Number of horizons
 
-
+% Course offset
+lo = 0.5;
