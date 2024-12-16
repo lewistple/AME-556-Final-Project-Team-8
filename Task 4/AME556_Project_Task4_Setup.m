@@ -40,12 +40,12 @@ dt = 0.04; % Time step
 N = 10; % Number of horizons
 
 %% Stairs
-% top (grid surface)
-l = 2;
+
+lo = 2; % Offset distance
 dy = 1e-8;
+
+% Grid surface
 x_grid = [0 1];
-y_grid = [0 l l+dy l+0.2 l+0.2+dy l+0.4 l+0.4+dy l+0.6 l+0.6+dy l+0.8 l+0.8+dy l+0.8+l];
+y_grid = [0 lo lo+dy lo+0.2 lo+0.2+dy lo+0.4 lo+0.4+dy lo+0.6 lo+0.6+dy lo+0.8 lo+0.8+dy 2*lo+0.8];
 z_height = [0 0 0.1 0.1 0.2 0.2 0.3 0.3 0.4 0.4 0.5 0.5;
             0 0 0.1 0.1 0.2 0.2 0.3 0.3 0.4 0.4 0.5 0.5];
-
-stairsColor = [0.5 0.5 0.5];
