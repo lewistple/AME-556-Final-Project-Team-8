@@ -1,2 +1,3 @@
-Haibo Ma Simscape Version contains no script, all IC and parameters set up in Simscape. 
-Tianpai contains script IC and parameter setup. 
+# A Task 1
+
+This folder contains old Task 1 files. They are no longer useful at this stage. Please go to models under other tasks, which already have fully-updates constraint saturation & error functions.
