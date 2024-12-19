@@ -1,6 +1,6 @@
 %% AME-556
 
-% HW3 Problem 2 (Simscape setup)
+% Project Task 1 Setup
 
 %% Clear
 
